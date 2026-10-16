@@ -1,0 +1,10 @@
+{
+  "name": "research-slides",
+  "version": "1.0.0",
+  "description": "Build, revise and review research .pptx decks (journal clubs, progress talks) in a clean academic style, with native PowerPoint equations, density and visual QA tools, and safe revision of hand-edited decks.",
+  "author": { "name": "Chen-Po Liao" },
+  "homepage": "https://github.com/Chen-Po/research-slides-skill",
+  "repository": "https://github.com/Chen-Po/research-slides-skill",
+  "license": "MIT",
+  "keywords": ["slides", "powerpoint", "pptx", "journal-club", "academic", "presentation", "statistical-genetics"]
+}

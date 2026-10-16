@@ -1,0 +1,12 @@
+{
+  "name": "research-slides-skill",
+  "description": "Research presentation decks (journal clubs, progress talks) as editable PowerPoint, built and checked by Claude Code.",
+  "owner": { "name": "Chen-Po Liao" },
+  "plugins": [
+    {
+      "name": "research-slides",
+      "source": "./plugins/research-slides",
+      "description": "Build, revise and review research .pptx decks in a clean academic style, with native equations and QA tools."
+    }
+  ]
+}

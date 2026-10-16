@@ -1,0 +1,70 @@
+{
+ "settings": {
+  "seed": 20261016,
+  "snps_per_locus": 200,
+  "study_n": 5000,
+  "prior_sd": 0.1,
+  "loci_per_setting": 200,
+  "adjacent_latent_rho": [
+   0.97,
+   0.995
+  ]
+ },
+ "example": {
+  "causal_snp": 109,
+  "lead_snp": 113,
+  "lead_abs_z": 6.1,
+  "causal_abs_z": 5.6,
+  "causal_pip": 0.04,
+  "cs_size": 3,
+  "max_pip": 0.76
+ },
+ "by_pve": [
+  {
+   "pve_percent": 0.2,
+   "coverage": 0.99,
+   "median_cs_size": 109.5,
+   "causal_pip_gt_half": 0.125
+  },
+  {
+   "pve_percent": 0.5,
+   "coverage": 0.99,
+   "median_cs_size": 4.0,
+   "causal_pip_gt_half": 0.625
+  },
+  {
+   "pve_percent": 1.0,
+   "coverage": 0.99,
+   "median_cs_size": 1.0,
+   "causal_pip_gt_half": 0.935
+  }
+ ],
+ "two_causal": {
+  "cs_has_a_causal": 0.975,
+  "cs_has_both": 0.355
+ },
+ "flip": [
+  {
+   "reference_n": 200,
+   "loci": 200,
+   "flipped_ranked_first": 1.0,
+   "median_rank": 1.0
+  },
+  {
+   "reference_n": 1000,
+   "loci": 200,
+   "flipped_ranked_first": 1.0,
+   "median_rank": 1.0
+  },
+  {
+   "reference_n": 5000,
+   "loci": 200,
+   "flipped_ranked_first": 1.0,
+   "median_rank": 1.0
+  }
+ ],
+ "diagnostic_example": {
+  "flipped_abs_t": 12.4,
+  "max_abs_t_other": 3.7
+ }
+}
