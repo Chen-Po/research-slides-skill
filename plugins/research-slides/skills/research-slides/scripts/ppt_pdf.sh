@@ -24,19 +24,22 @@ osascript <<OSA
 with timeout of 240 seconds
 tell application "Microsoft PowerPoint"
   open POSIX file "$COPY"
-  set target to missing value
+  set targetName to "$(basename "$COPY")"
+  set found to false
   set t0 to current date
-  repeat while target is missing value
-    repeat with q in presentations
-      if (name of q) starts with "_ppt_qa_" then set target to contents of q
+  repeat until found
+    -- index loop: iterating "presentations" while the list is still empty raises -2763
+    set n to count of presentations
+    repeat with i from 1 to n
+      if (name of presentation i) is targetName then set found to true
     end repeat
-    if target is missing value then
+    if not found then
       if ((current date) - t0) > 90 then error "QA copy did not open within 90 s (a dialog may be waiting)"
       delay 1
     end if
   end repeat
-  save target in POSIX file "$PDF" as save as PDF
-  close target saving no
+  save presentation targetName in POSIX file "$PDF" as save as PDF
+  close presentation targetName saving no
 end tell
 end timeout
 OSA
